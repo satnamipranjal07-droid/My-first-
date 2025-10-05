@@ -1,0 +1,31 @@
+// ======= Alert Button Example =======
+function showAlert() {
+  alert("Hello! Welcome to my GitHub website.");
+}
+
+// ======= Dark Mode Toggle =======
+function toggleDarkMode() {
+  const body = document.body;
+  body.classList.toggle("dark-mode");
+}
+
+// ======= Dynamic Content Example =======
+function changeContent() {
+  const section = document.getElementById("about");
+  section.innerHTML = "<h2>About Me</h2><p>Content updated using JavaScript!</p>";
+}
+
+// ======= Event Listeners =======
+document.addEventListener("DOMContentLoaded", () => {
+  // Alert button
+  const alertBtn = document.getElementById("alertBtn");
+  if(alertBtn) alertBtn.addEventListener("click", showAlert);
+
+  // Dark mode button
+  const darkModeBtn = document.getElementById("darkModeBtn");
+  if(darkModeBtn) darkModeBtn.addEventListener("click", toggleDarkMode);
+
+  // Change content button
+  const changeContentBtn = document.getElementById("changeContentBtn");
+  if(changeContentBtn) changeContentBtn.addEventListener("click", changeContent);
+});
